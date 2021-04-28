@@ -33,6 +33,10 @@ Clone the repository from github and go to the ccd directory:
     
     cd flask_with_sql_connector
 
+Set up a demo Mariadb database:
+
+tutorial plus data dump...
+
 Create a python3.8 virtual environment containing the dependences found in requirements.txt:
 
     python3 -m venv ~/virtual_environments/lahma
