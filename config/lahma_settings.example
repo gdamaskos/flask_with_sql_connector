@@ -1,0 +1,6 @@
+SECRET_KEY = '\xbb\xca\t\x9f%:\n\x17\x03\xf0\xbd\xc8\xbat\xe5\xd2\xb7\x02\xfa\x7f\x8a;\xfc\xf1\xa2\xe4\x02\xcfgo\xd5\xb9'
+EMAIL = 'xxxxx@email.com'
+DB_IP='localhost'
+DB_USERNAME='xxxx'
+DB_PASSWORD='xxxx'
+DB_NAME='xxxx'
