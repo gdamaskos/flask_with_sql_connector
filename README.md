@@ -37,7 +37,7 @@ Install Mariadb following this tutorial https://www.digitalocean.com/community/t
 
 Log in the database as root or administrator and create a database:
 	
-	mysql -u admin -p
+	$ mysql -u admin -p
 	mysql> CREATE DATABASE LahmaDB1;
 	mysql> exit
 	
