@@ -33,10 +33,18 @@ Clone the repository from github and go to the ccd directory:
     
     cd flask_with_sql_connector
 
-Set up a demo Mariadb database:
+Install Mariadb following this tutorial https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
 
-Install following this tutorial https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
-tutorial plus data dump...
+Log in the database as root or administrator and create a database:
+	
+	mysql -u admin -p
+	mysql> CREATE DATABASE LahmaDB1;
+	mysql> exit
+	
+Import the demo databse provided in the repository:
+
+	mysql -u admin -p LahmaDB1 < data/LahmaDB1.sql 
+
 
 Create a python3.8 virtual environment containing the dependences found in requirements.txt:
 
