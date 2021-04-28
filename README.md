@@ -4,7 +4,7 @@ LAHMA stands for Local Annotation of Homology Matched Aminoacids.
 
 LAHMA is a web application that facilitates protein crystallography research. In this repository you can find the core of the application.
 
-You can visit the full site https://lahma.pdb-redo.eu
+You can visit the complete site https://lahma.pdb-redo.eu
 
 Basic web software used in this project:
 * Flask
