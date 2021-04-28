@@ -1,0 +1,17 @@
+  GNU nano 2.5.3      File: /etc/systemd/system/lahmav.service                  
+
+[Unit]
+Description=Gunicorn instance to serve lahmav
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/gdamaskos/web_projects/lahmav
+Environment='LAHMAV_SETTINGS=/home/gdamaskos/web_projects/lahmav/config/lahmav_$
+ExecStart=/usr/local/bin/gunicorn --workers 3 -b 0.0.0.0:80 --log-level info --$
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

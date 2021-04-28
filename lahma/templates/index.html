@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!--Card-->
+<div class="card panel-group panel" id="first-div" data-title="main_lahma_application">
+    <!--Title-->
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#input-panel">
+                <span class="black-font">Input</span>
+            </a>
+        </h4>
+    </div>
+    <!--Card content-->
+    <div class="card-block panel-collapse collapse in" id="input-panel">
+        <div class="row">
+            <div class="col-md-6">
+                <!--Text-->
+                <h5>Search LAHMA database by PDB identifier</h5>
+                <br>
+                <div id="pdb-id-search-alerts" class=""></div>
+                <input id="pdb-id" type="text" autocomplete="off" placeholder="Identifier" style="display: inline; width: 210px;">
+                <input id="pdbid-searchbtn" style="display: inline;" type="button" value="Search" onclick="window.location.search = '?&pdb_id=' + $('#pdb-id').val().trim()">
+                <div style="display: block;">
+        	        <img src="{{ url_for('static', filename='img/bgLoad.gif') }}" style="display: none;" class="pdb-search-progress-bar">
+        	        <img src="{{ url_for('static', filename='img/bgLoad.gif') }}" style="display: none;" class="pdb-search-progress-bar">
+                </div>
+                <br>
+                <div id="input-alerts"></div>
+            </div>
+            <div class="col-md-6">
+                <h5>Or upload a PDB file</h5>
+                <br>
+                <form action="/pdbscript_status" method="POST" enctype="multipart/form-data">
+                    <input type = "file" name = "file" />
+                    <input type = "submit" value="Upload"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/.Card content-->
+</div>
+<!--/.Card-->
+{% if pdb_id is defined %}
+<script>
+    var pdb_id = '{{ pdb_id }}';
+    document.getElementById('pdb-id').value = pdb_id;
+    function pageFullyLoaded(e) {
+        get_annotations();
+    }
+    window.addEventListener("load", pageFullyLoaded, false);
+</script>
+{% endif %}
+
+{% endblock %}

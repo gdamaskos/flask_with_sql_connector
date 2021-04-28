@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+<!--Section: Best features-->
+<section>
+    <div class="row">
+        <!--First columnn-->
+        <div class="col-md-6">
+            <!--Card-->
+            <div class="card wow fadeInUp">
+                <!--Card content-->
+                <div class="card-block text-xs-left">
+                    <!--Title-->
+                    <h4 class="card-title">LAHMA info and usage</h4>
+                    <hr>
+                    <!--Text-->
+                    <p class="card-text">
+                        The <b>Local Annotation of Homology-Matched Amino acids (LAHMA)</b> website is a tool to help you get the most knowledge out of a protein structure model. LAHMA compares every protein chain in your model of interest with all homologous chains in the <a href="https://pdb-redo.eu">PDB-REDO</a> data bank at a sequence similarity level of 70% or more. It also computes many metrics that are not related to homologs, but give more information on the protein.
+                    </p>
+               <!--     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">CCD gathers various predictions for your protein and displays the information aligned for easy inspection.</li>
+                        <li class="list-group-item">CCD allows you then decide where possible constructs should start and stop by simply clicking with the mouse.</li>
+                        <li class="list-group-item">CCD does not design the construct automatically.</li>
+                        <li class="list-group-item">CCD will suggest primers for PCR amplification, based on either TM or simply a user choice for length.</li>
+                        <li class="list-group-item">CCD will not check the primers for secondary structure or for cross-hybrization in other sequences.</li>
+                    </ul>  -->
+                    <b>Usage:</b> 
+                    <ol>
+                        <li>Input a PDB identifier in the input field on the home page. Only PDB-REDO entries are in the LAHMA database.</li>
+                        <li>Information is displayed below the protein sequence(s). Mouseover on the question marks
+                            will show additional information on the parameters, or see to the right for a more extensive description of the parameters.</li>
+                        <li>Clicking on any residue in the protein sequence will pop up a new window that compares that residue with its homologous residues.</li>
+                        <li>On the residue page, mouseovers show more information on the residues and highlight the residue in the other plots. Again, mouseover on the question marks show what is plotted.</li>
+                    </ol>
+                    <p class="card-text">
+                     Some parameters in LAHMA have been derived from DSSP and HSSP. See the <a href="{{ url_for('credits') }}">credits</a> page for references to these sources.
+                    </p>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+            <!--Card-->
+            <div class="card wow fadeInUp" data-wow-delay="0.2s">
+                <!--Card content-->
+                <div class="card-block text-xs-left">
+                    <!--Title-->
+                    <h4 class="card-title">FAQs</h4>
+                    <hr>
+                    <!--Text-->
+                    <h5>The PDB entry I am looking for is not in the database. Why?</h5>
+                    <p class="card-text">
+                    The LAHMA database only contains PDB-REDO entries. Check if your entry is in PDB-REDO <a
+                       href=pdb-redo.eu>here</a>. If the entry was released by the PDB less than a week ago, the 
+                    entry may not yet have been added to the database.
+                    </p>
+                    <h5>I cannot solve my issue. How can I contact the developers?</h5>
+                    <p class="card-text">
+                        LAHMA was created in the PDB-REDO group of Robbie Joosten and Anastassis Perrakis. They can be
+                        contacted at r.joosten at nki.nl and a.perrakis at nki.nl, respectively.
+                    </p>
+                    <h5>Which browsers are supported?</h5>
+                    <p class="card-text">
+                        Currently, this website should work on Firefox, Chrome, Safari and Microsoft Edge. Internet
+                        Explorer and Opera are not (yet) supported. Also, the website is not designed for use on small
+                        (phone) screens.
+                    </p>
+                    <h5>This service is awesome. How can I cite it?</h5>
+                    <p class="card-text">
+                    At this point, there is no citation available. It will be added once LAHMA has been published. 
+                    <!-- TODO do so -->
+                    </p>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+        <!--First columnn-->
+
+        <!--Second columnn-->
+        <div class="col-md-6">
+            <div class="card wow fadeInUp">
+                <!--Card content-->
+                <div class="card-block text-xs-left">
+                <h4 class="card-title">Explanation of LAHMA parameters</h4>
+                <hr>
+                <h5>Ramachandran and Rotamer Z-score</h5>
+                <p class="card-text">
+                The Z-score of the phi/psi or chi1/chi2 torsion angles, adapted from the original algorithm in
+                WHAT_CHECK (<a
+                   href=https://watermark.silverchair.com/13-4-425.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAmMwggJfBgkqhkiG9w0BBwagggJQMIICTAIBADCCAkUGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM4GMBKcvdc4EKN07tAgEQgIICFjEm2i3DV25Is8QBD8Iexldom6BihEnNoX_Wh8xHpNVpyEw73ZIZpqbM-dTpSdroX5KWApxxHeyMhAsvCgxE6kXm3kKxfEM-QDhTtrjV4plvmMBDfq6TdjdWHaGTmbsiOZDvzqLpp0S3zlIiORMJtN6pFbMQYT2tKszUvKDYXY4Mjx-hRYYrDd7eQ_JlrFD_oVD5wZwu-lo6ImF3KSfyRzp3wvmEw2JnCVyUyxwUTFql_6J9dDCFO-LEa76idO_nlCnJhMRdjptPtXVBMpxNbSTIuqn2uApvElC1Ni7_h_3uWMzNlIN-MXbd8D6srnCNb3B30X-mdXIEWwJjU_krSfTgOvKNpuz0US_AgC_kM7TUsznSgJqwl1m0qCmsXJfHKOJBY1qhbM7EmN7UKiHAWFQBbUOAJSwR1MSVsgI6niItwS2llGN9DNCW72G25RdgjjZPn-HX8F87KE2WNfFQHBqd79uawLCZwkZJ8NFzBeHFMWcXsIKsl33SqIJl-3f86IaXRGByL81v5MBJ_icgNz7ejw7EAGkKynIWQUOCj0dzxvG_tB1GzfMsj34BW6XV9BF2vr9K61ga6alM6WW5oSi03LShO8ZcHzsTnQuF6qBTuXziw5e0G6jgMMFVfuH2lEbEKiMOXDRlaZoiSbYHAPwr_TscBwmfLfIX4IRu_8g2ostopQDhZm02pgPaDUBWN7_-2WngTw>Hooft
+                   <i>et al.</i>, 1997</a>). As this is a Z-score for one residue, it indicates if the angles
+                are in a well-populated part of the distribution or not.
+                </p>
+                <h5>Ramachandran classification</h5>
+                <p class="card-text">
+                The Ramachandran angles of all homologous residues are classified using k-means clustering. Big
+                outliers are more than 5 sigma from the cluster center, small outliers more than 3 sigma. There are
+                also minimal absolute differences for outliers and between classes: these are given in the paper
+                describing LAHMA.
+                </p>
+                <h5>RSCC scores</h5>
+                <p class="card-text">
+                The real-space correlation coefficient (RSCC) Z-score gives an indication how good the density fit of a
+                residue is compared to the other residues in the protein. It is calculated as described by <a
+                   href=https://journals.iucr.org/m/issues/2014/04/00/be5263/index.html>Joosten <i>et al.</i>,
+                   2014</a>.
+                </p>
+                <h5>Relative Z-scores (Ramachandran, rotamer, and RSCC)</h5>
+                <p class="card-text">
+                The initial Z-scores are compared across homologs. If a particular residue has for instance a low
+                Ramachandran Z-score, but the homologous residues also have a poor Z-score, it is becomes more likely
+                that the protein is in a somewhat strained conformation at this position and less likely that it is wrong.
+                A high relative Z-score thus indicates how good a residue is compared to its homologous residues.
+                </p>
+                <h5>Rotamer percentages</h5>
+                <p class="card-text">
+                The rotamers are defined according to the Molprobity convention (<a
+                   href=https://onlinelibrary.wiley.com/doi/pdf/10.1002/1097-0134(20000815)40:3%3C389::AID-PROT50%3E3.0.CO;2-2>Lovell
+                   <i>et al.</i>, 2000</a>)
+                that chi angles around 60° are named <i>p</i> (gauche plus), around -60° <i>m</i> (gauche minus), and
+                around 180° <i>t</i> (trans). We display the percentage of homologous residues with the
+                same rotamers. Also, a second, homology-based percentage is given that takes into account that takes the number of
+                different rotamers at a position into account. For instance, if a Lys rotamer is found 25% of the
+                time, but there are 20 different rotamers across homologs, it occurs relatively often. Then, this
+                number is high. The opposite is true for a Ser rotamer found in 25% of the cases, where only 2 are
+                found at that position.
+                </p>
+                <h5>Cis/trans angles</h5>
+                <p class="card-text">
+                If the omega angle is more than 30° from the ideal cis or trans value, it is given as distorted.
+                Otherwise it is cis (close to 0°) or trans (close to 180°). By counting the percentage of homologous
+                residues that is either cis or trans, we find which conformation is most common and thus assign minority
+                conformations, or, if it is very rare, outlier conformations.
+                </p>
+                <h5>C-alpha torsion angles</h5>
+                <p class="card-text">
+                The torsion angle over four consecutive C-alpha atoms is computed as a measure of the local backbone
+                conformation. For residue <i>i</i>, the four C-alphas involved are the <i>i-2</i>, <i>i-1</i>,
+                <i>i</i>, and <i>i+1</i>. Again, similar to Ramachandran classification, the angles are clustered with
+                k-means clustering to determine outliers and minority conformations.
+                </p>
+                <h5>Hydrogen bonds</h5>
+                <p class="card-text">
+                Hydrogen bonds are computed as described in <a href=https://onlinelibrary.wiley.com/doi/full/10.1002/pro.3353>van Beusekom <i>et al</i>, 2018</a>. 
+                Note that we only compute protein-protein hydrogen bonds. The H-bond donated and accepted are summed
+                to get the total H-bond count.
+                </p>
+                <h5>Symmetry contacts</h5>
+                <p class="card-text">
+                A symmetry contact between two residues is defined here as a distance smaller than 3.5 Å between any 
+                two atoms of the residue pair, one of which is generated by performing symmetry operations.
+                </p>
+                <h5>Secondary structure</h5>
+                <p class="card-text">
+                The secondary structure is obtained directly from <a href=https://swift.cmbi.umcn.nl/gv/dssp/>DSSP</a>.
+                </p>
+                <h5>Surface accessibility</h5>
+                <p class="card-text">
+                The surface accessibility is also obtained from <a href=https://swift.cmbi.umcn.nl/gv/dssp/>DSSP</a>.
+                The number that is shown is a percentage of the maximum accessibility of that residue (obtained by
+                getting the surface accessibility from DSSP from a PDB file containing that single residue).
+                </p>
+                <h5>Post-translational modifications</h5>
+                <p class="card-text">
+                Post-translational modifications are found by checking the residue name (in case of phosphorylation,
+                methylation, acetylation, carboxylation, hydroxylation, sulphation, oxidation, and pyroglutamation)
+                and by checking presence of LINK records (in case of glycosylation). An example is of the former is
+                the residue TPO, which is a phosphorylated THR. An example of the latter is an NAG that is linked to
+                ASN in N-glycosylation.
+                </p>
+                <h5>PDB sequence conservation and orderedness</h5>
+                <p class="card-text">
+                These numbers simply represent the percentage of homologous residues that have the same residue type
+                and that are modeled, respectively.
+                </p>
+                <h5>HSSP sequence conservation and entropy</h5>
+                <p class="card-text">
+                <a href=https://swift.cmbi.umcn.nl/gv/hssp/>HSSP</a> performs a BLAST search on PDB entries to search
+                for (remote) homologs both in and out of the PDB. The percentage of homologs with the same residue
+                type per position is given as a percentage. HSSP also computes an entropy measure, which shows how
+                variable the residue composition is. The entropy is maximal if all 20 amino acid types are found in 5%
+                of the homologs; the entropy is far lower if one residue type occurs 81% of the time and the others
+                all 1% of the time.
+                </p>
+                <h5>Ligand contacts</h5>
+                <p class="card-text">
+                A contact is given if any two atoms in a given residue+ligand pair are within 3.5 Å of one another.
+                </p>
+                <h5>B-factor ratio</h5>
+                <p class="card-text">
+                The B-factor ratio for a particular amino acid is the average B factor of the atoms of that amino acid 
+                divided by the average B factor of the protein structure model.
+                </p>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+        <!--Second columnn-->
+    </div>
+</section>
+<!--/Section: Best features-->
+{% endblock %}
