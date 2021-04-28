@@ -35,6 +35,7 @@ Clone the repository from github and go to the ccd directory:
 
 Set up a demo Mariadb database:
 
+Install following this tutorial https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
 tutorial plus data dump...
 
 Create a python3.8 virtual environment containing the dependences found in requirements.txt:
@@ -49,7 +50,7 @@ Install python dependencies:
 
 Modify the settings in `config/lahma_settings.example` to your needs and rename the
 file to `config/lahma_settings.cfg`. Make sure you generate a new secret key,
-and fill in a valid email.
+and fill in a valid email. Make sure you put the right credentils to access the database (IP, Username, Password, Database_name).
 
 The secret key can be generated using a python shell, for example:
 
