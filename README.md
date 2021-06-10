@@ -1,4 +1,4 @@
-# LAHMA core
+# LAHMA
 
 LAHMA stands for Local Annotation of Homology Matched Aminoacids.
 
